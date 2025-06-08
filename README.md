@@ -1,4 +1,4 @@
-# useSocket
+# react-simple-socket
 
 > **A simple React hook wrapper around Socket.IO client**
 
@@ -14,6 +14,7 @@ Just a convenient TypeScript hook that handles the boilerplate of connecting Soc
 - Provides TypeScript types for common patterns
 - Handles basic reconnection logic
 - Saves you from writing the same Socket.IO + useState code repeatedly
+
 
 ## What it doesn't do
 
