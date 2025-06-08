@@ -1,0 +1,66 @@
+{
+    "name": "@tpgainz/socket-events",
+    "version": "2.0.0",
+    "description": "Type-safe Socket.IO React hook for real-time state synchronization",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "files": [
+        "lib",
+        "README.md"
+    ],
+    "keywords": [
+        "socket.io",
+        "react",
+        "typescript",
+        "real-time",
+        "state-management",
+        "websocket",
+        "hook"
+    ],
+      "scripts": {
+    "build": "tsc",
+    "bundle": "npm run build && webpack",
+    "size": "npm run bundle && bundlesize",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src --ext .ts,.tsx",
+    "publish": "npm run build && npm run test && npm version patch && npm publish"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/socket-events.min.js",
+      "maxSize": "15kb"
+    }
+  ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tpgainz/socket-events.git"
+    },
+    "author": "Tpgainz",
+    "license": "MIT",
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.0.0",
+        "@testing-library/react": "^14.0.0",
+        "@types/jest": "^29.5.0",
+        "@types/react": "^18.0.0",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "bundlesize2": "^0.0.35",
+        "eslint": "^8.0.0",
+        "jest": "^29.5.0",
+        "jest-environment-jsdom": "^29.5.0",
+        "ts-jest": "^29.1.0",
+        "typescript": "^5.0.0",
+        "webpack": "^5.99.9",
+        "webpack-cli": "^6.0.1"
+    },
+    "dependencies": {
+        "socket.io-client": "^4.8.1"
+    },
+    "peerDependencies": {
+        "react": ">=16.8.0"
+    }
+}
